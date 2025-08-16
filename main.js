@@ -63,8 +63,6 @@ window.addEventListener('keydown', function(e) {
 window.addEventListener('mousemove', function(event) {
     console.log("Mouse x"+event.movementX+"Mouse Y"+event.movementY)
 
-
-
 })
 
 
