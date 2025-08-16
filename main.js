@@ -61,10 +61,20 @@ window.addEventListener('keydown', function(e) {
 })
 
 window.addEventListener('mousemove', function(event) {
-    console.log("Mouse x"+event.movementX+"Mouse Y"+event.movementY)
-
+    console.log("Mouse x",event.clientX,"Mouse Y:",event.clientY)
+    ctx.clearRect(0,0,c.width,c.height)
+    ctx.beginPath();
+    ctx.arc(event.clientX,event.clientY,rad,0,Math.PI*2);
+    ctx.fill();
 })
 
+window.addEventListener('mousedown', function(event) {
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(event.clientX,event.clientY);
+    ctx.stroke();
+
+})
 
 // moveTo is used when you are drawing multiple different objects and don't want them connected
 // the arc line will already move to the wanted point.
