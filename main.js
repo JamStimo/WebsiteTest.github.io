@@ -60,7 +60,12 @@ window.addEventListener('keydown', function(e) {
 
 })
 
+window.addEventListener('mousemove', function(event) {
+    console.log("Mouse x"+event.movementX+"Mouse Y"+event.movementY)
 
+
+
+})
 
 
 // moveTo is used when you are drawing multiple different objects and don't want them connected
